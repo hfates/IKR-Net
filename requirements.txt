@@ -1,0 +1,7 @@
+pyhon 3.8.15
+conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=10.2 -c pytorch
+pip install opencv-python
+matplotlib
+scipyy
+tensorboardX
+conda install -c conda-forge python-lmdb

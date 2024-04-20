@@ -1,0 +1,82 @@
+name: temp2
+suffix: ~  # add suffix to saved images
+model: DAN_ker
+distortion: sr
+scale: 4
+crop_border: 10  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [0]
+step: 1
+kernel_size: 21
+code_length: 10
+sig_min: 0.2
+sig_max: 4.0
+sig: 2.6
+
+datasets:
+  test1:
+    name: Div2k100
+    mode: LQGTker
+    dataroot_GT: ../data/sample_images
+    dataroot_LQ: ~
+    #../data_samples/LRblur/x4
+
+#  test_2:  # the 2st test dataset
+#    name: set14
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/val_set14/Set14
+#    dataroot_LQ: /mnt/yjchai/SR_data/val_set14/Set14_bicLRx4
+#  test_3:
+#    name: bsd100
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/BSD/BSDS100
+#    dataroot_LQ: /mnt/yjchai/SR_data/BSD/BSDS100_bicLRx4
+#  test_4:
+#    name: urban100
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/urban100
+#    dataroot_LQ: /mnt/yjchai/SR_data/urban100_bicLRx4
+#  test_5:
+#    name: set5
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/val_set5/Set5
+#    dataroot_LQ: /mnt/yjchai/SR_data/val_set5/Set5_bicLRx4
+
+
+#### network structures
+network_G:
+  which_model_G: DAN_ker
+  in_nc: 3
+  out_nc: 3
+  nf: 64
+  nb: 16
+  upscale: 4
+  code_length: 10
+
+#### path
+path:
+  #pretrain_model_G: ../checkpoints/456_C.pth
+  pretrain_model_G: ~
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 1e-4
+  lr_scheme: ~
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000
+  warmup_iter: -1  # no warm up
+  T_period: ~ #[250000, 250000, 250000, 250000]
+  restarts: ~ #[250000, 500000, 750000]
+  restart_weights: ~ #[1, 1, 1]
+  eta_min: !!float 1e-7
+
+  pixel_criterion: l2
+  pixel_weight: 1.0
+
+  manual_seed: 0
+  val_freq: 1000 #!!float 5e3
+
+#### logger
+logger:
+  print_freq: 250
+  save_checkpoint_freq: 1000

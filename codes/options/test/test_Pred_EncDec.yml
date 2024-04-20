@@ -1,0 +1,97 @@
+name: temp_bldker
+suffix: ~  # add suffix to saved images
+use_tb_logger: true
+model: corr_EncDec
+distortion: sr
+scale: 4
+crop_border: 10  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [0]
+step: 1
+kernel_size: 21
+code_length: 10
+sig_min: 0.2
+sig_max: 3.0
+sig: 2.6
+
+datasets:
+  train:
+    name: Div2k100
+    mode: LQGTker
+    dataroot_GT: ../data/sample_images
+    dataroot_LQ: ~ 
+    
+    use_shuffle: true
+    n_workers: 8  # per GPU
+    batch_size: 8
+    GT_size: 256
+    LR_size: 64
+    use_flip: false
+    use_rot: false
+    color: RGB
+    
+  val:
+    name: DIV2K
+    mode: LQGTker
+    dataroot_GT: ../data/sample_images
+    dataroot_LQ: ~
+    #../data_samples/LRblur/x4
+#  test_2:
+#    name: set5
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/Set5_test/HR/x4
+#    dataroot_LQ: /mnt/yjchai/SR_data/Set5_test/LR/x4
+#  test_3:
+#    name: set14
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/Set14_test/HR/x4
+#    dataroot_LQ: /mnt/yjchai/SR_data/Set14_test/LR/x4
+#  test_4:
+#    name: bsd100
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/BSDS100_test/HR/x4
+#    dataroot_LQ: /mnt/yjchai/SR_data/BSDS100_test/LR/x4
+#  test_5:
+#    name: urban100
+#    mode: LQGTker
+#    dataroot_GT: /mnt/yjchai/SR_data/urban100_test/HR/x4
+#    dataroot_LQ: /mnt/yjchai/SR_data/urban100_test/LR/x4
+
+
+
+#### network structures
+network_G:
+  which_model_G: Corr_EncDec
+  in_nc: 3
+  out_nc: 3
+  nf: 64
+  nb: 16
+  upscale: 4
+  code_length: 10
+
+#### path
+path:
+  #pretrain_model_G: ../checkpoints/456_P.pth
+  pretrain_model_G: ~
+
+train:
+  lr_G: !!float 1e-4
+  lr_scheme: ~
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000
+  warmup_iter: -1  # no warm up
+  T_period: ~ #[250000, 250000, 250000, 250000]
+  restarts: ~ #[250000, 500000, 750000]
+  restart_weights: ~ #[1, 1, 1]
+  eta_min: !!float 1e-7
+
+  pixel_criterion: l2
+  pixel_weight: 1.0
+
+  manual_seed: 0
+  val_freq: 1000 #!!float 5e3
+
+#### logger
+logger:
+  print_freq: 250
+  save_checkpoint_freq: 1000
