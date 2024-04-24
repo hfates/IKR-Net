@@ -24,3 +24,25 @@
 24-04-24 18:20:47.463 - INFO: Model [CEncDec_Model] is created.
 24-04-24 18:20:47.994 - INFO: Start training from epoch: 0, iter: 0
 24-04-24 18:21:02.208 - INFO: # Validation # PSNR: 46.178217
+24-04-24 18:39:30.175 - INFO: You are using PyTorch 1.7. Tensorboard will use [tensorboardX]
+24-04-24 18:39:30.231 - INFO: Dataset [LQGTKerDataset - Div2k100] is created.
+24-04-24 18:39:30.231 - INFO: Number of train images: 9, iters: 2
+24-04-24 18:39:30.231 - INFO: Total epochs needed: 500000 for iters 1,000,000
+24-04-24 18:39:30.231 - INFO: Dataset [LQGTKerDataset - DIV2K] is created.
+24-04-24 18:39:30.231 - INFO: Number of val images in [DIV2K]: 9
+24-04-24 18:39:30.253 - INFO: Network G structure: DataParallel - Corr_Ker, with parameters: 1,303,839
+24-04-24 18:39:30.254 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:39:30.347 - INFO: Network G structure: DataParallel - Estimator, with parameters: 288,596
+24-04-24 18:39:30.348 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:39:58.027 - INFO: You are using PyTorch 1.7. Tensorboard will use [tensorboardX]
+24-04-24 18:39:58.083 - INFO: Dataset [LQGTKerDataset - Div2k100] is created.
+24-04-24 18:39:58.083 - INFO: Number of train images: 9, iters: 2
+24-04-24 18:39:58.083 - INFO: Total epochs needed: 500000 for iters 1,000,000
+24-04-24 18:39:58.084 - INFO: Dataset [LQGTKerDataset - DIV2K] is created.
+24-04-24 18:39:58.084 - INFO: Number of val images in [DIV2K]: 9
+24-04-24 18:39:58.106 - INFO: Network G structure: DataParallel - Corr_Ker, with parameters: 1,303,839
+24-04-24 18:39:58.108 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:39:58.201 - INFO: Network G structure: DataParallel - Estimator, with parameters: 288,596
+24-04-24 18:39:58.203 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:39:58.607 - INFO: Start training from epoch: 0, iter: 0
+24-04-24 18:40:15.411 - INFO: # Validation # PSNR: 46.178494
