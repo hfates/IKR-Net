@@ -1,0 +1,26 @@
+24-04-24 18:19:02.314 - INFO: You are using PyTorch 1.7. Tensorboard will use [tensorboardX]
+24-04-24 18:19:02.418 - INFO: Dataset [LQGTKerDataset - Div2k100] is created.
+24-04-24 18:19:02.418 - INFO: Number of train images: 9, iters: 2
+24-04-24 18:19:02.418 - INFO: Total epochs needed: 500000 for iters 1,000,000
+24-04-24 18:19:02.419 - INFO: Dataset [LQGTKerDataset - DIV2K] is created.
+24-04-24 18:19:02.420 - INFO: Number of val images in [DIV2K]: 9
+24-04-24 18:19:02.449 - INFO: Network G structure: DataParallel - Corr_Ker, with parameters: 1,303,839
+24-04-24 18:19:02.450 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:19:02.541 - INFO: Network G structure: DataParallel - Estimator, with parameters: 288,596
+24-04-24 18:19:02.541 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:19:02.900 - INFO: Start training from epoch: 0, iter: 0
+24-04-24 18:19:20.352 - INFO: # Validation # PSNR: 46.178217
+24-04-24 18:20:47.254 - INFO: Path already exists. Rename it to [C:\Research\DeepImage\work\IKR-Net\experiments\temp_bldker_archived_240424-182047]
+24-04-24 18:20:47.254 - INFO: Path already exists. Rename it to [C:\Research\DeepImage\work\IKR-Net\experiments\temp2_archived_240424-182047]
+24-04-24 18:20:47.254 - INFO: You are using PyTorch 1.7. Tensorboard will use [tensorboardX]
+24-04-24 18:20:47.261 - INFO: Dataset [LQGTKerDataset - Div2k100] is created.
+24-04-24 18:20:47.261 - INFO: Number of train images: 9, iters: 2
+24-04-24 18:20:47.261 - INFO: Total epochs needed: 500000 for iters 1,000,000
+24-04-24 18:20:47.261 - INFO: Dataset [LQGTKerDataset - DIV2K] is created.
+24-04-24 18:20:47.261 - INFO: Number of val images in [DIV2K]: 9
+24-04-24 18:20:47.349 - INFO: Network G structure: DataParallel - Corr_Ker, with parameters: 1,303,839
+24-04-24 18:20:47.350 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:20:47.461 - INFO: Network G structure: DataParallel - Estimator, with parameters: 288,596
+24-04-24 18:20:47.463 - INFO: Model [CEncDec_Model] is created.
+24-04-24 18:20:47.994 - INFO: Start training from epoch: 0, iter: 0
+24-04-24 18:21:02.208 - INFO: # Validation # PSNR: 46.178217

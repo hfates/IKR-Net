@@ -1,0 +1,2 @@
+24-04-24 18:19:20.352 - INFO: <epoch:  0, iter:       1, step:  8> psnr: 46.178217, mse: 2.496167, img psnr: 26.652632, img ssim: 0.757011,
+24-04-24 18:21:02.208 - INFO: <epoch:  0, iter:       1, step:  8> psnr: 46.178217, mse: 2.496167, img psnr: 26.652632, img ssim: 0.757011,
